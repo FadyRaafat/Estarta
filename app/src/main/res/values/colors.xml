@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#002762</color>
+    <color name="colorPrimaryDark">#0064C3</color>
+    <color name="colorPrimaryLight">#4D1782FB</color>
+    <color name="gray">#B6B6B6</color>
+    <color name="black_000929">#000929</color>
+    <color name="lightGray">#F9FAFB</color>
+    <color name="darkGray">#1F2426</color>
+    <color name="blue">#2CB6FD</color>
+    <color name="red">#e20404</color>
+    <color name="backgroundGray">#FAFAFA</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="off_white">#F7F7F7</color>
+    <color name="darkGreen">#039855</color>
+    <color name="darkRed">#D92D20</color>
+    <color name="blue_1d8ef9">#1D8EF9</color>
+
+    <color name="blue_70b2f3">#70B2F3</color>
+    <color name="dark_blue">#444E72</color>
+    <color name="blue_838baa">#838BAA</color>
+    <color name="purple">#F1F4FF</color>
+    <color name="grey_000929">#000929</color>
+    <color name="gold">#FFD700</color>
+    <color name="off_white_background">#f4f6f8</color>
+    <color name="grey">#b7c3d6</color>
+
+</resources>

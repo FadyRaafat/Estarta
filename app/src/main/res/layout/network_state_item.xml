@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.fady.estarta.utils.common.NetworkState" />
+
+        <variable
+            name="state"
+            type="com.fady.estarta.utils.common.NetworkState" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ProgressBar
+            visibleGone="@{state.status == NetworkState.Status.RUNNING}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/error_text"
+            visibleGone="@{state.msg != null}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{state.msg}"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/retry"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            visibleGone="@{state.status == NetworkState.Status.FAILED}"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Retry"
+            android:textSize="16sp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+    </LinearLayout>
+</layout>

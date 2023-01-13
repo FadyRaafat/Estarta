@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen16"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen8"
+        app:cardElevation="@dimen/dimen6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/productImage_IV"
+                setNetworkImage="@{item.imageUrlsThumbnails.get(0)}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen130"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/property_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen8"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage_IV">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen8"
+                    android:text="@{item.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size18"
+                    android:textStyle="bold"
+                    tools:text="Notebook" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.price}"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_size16"
+                    android:textStyle="bold"
+                    tools:text="AED 5" />
+
+
+                <TextView
+                    beatifyDate="@{item.createdAt}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen8"
+                    android:layout_marginBottom="@dimen/dimen8"
+                    android:alpha="0.5"
+                    android:textColor="@color/grey_000929"
+                    android:textSize="@dimen/text_size12"
+                    tools:text="2019-02-23 07:56:26.686128" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fady.estarta.data.models.Result" />
+    </data>
+
+</layout>
